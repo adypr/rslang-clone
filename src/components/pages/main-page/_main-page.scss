@@ -1,0 +1,311 @@
+@import '../../styles/base/constants';
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3% 0;
+
+  overflow: hidden;
+
+  z-index: 0;
+  background: url("./assets/images/main-page/background.jpg") no-repeat;
+  background-size: cover;
+  background-position: center left;
+  min-height: calc(100vh - #{$header-height} - #{$footer-height});
+
+  @media (max-width: $width-tablet) {
+    background-position: center;
+  }
+
+  @media (max-width: $width-mobile) {
+    min-height: calc(100vh - #{$header-height} - #{$footer-mobile-height});
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    flex: 0 1 100%;
+    justify-content: center;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex: 0 0 87%;
+
+    @media (max-width: $width-tablet) {
+      gap: 29px;
+      flex-basis: 90%;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media (max-width: $width-mobile) {
+      gap: 107px;
+      max-width: 89vw;
+    }
+
+  }
+
+  &__heading {
+    color: $color-basic;
+    text-align: center;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 670px;
+    max-width: 640px;
+    gap: 30px;
+
+    @media (max-width: $width-desktop) {
+      max-width: 540px;
+      min-height: 580px;
+    }
+
+    @media (max-width: $width-laptop) {
+      min-height: auto;
+    }
+
+    @media (max-width: $width-mobile) {
+      align-items: center;
+    }
+
+    &_heading {
+      display: flex;
+    }
+  }
+
+  &__image {
+    display: flex;
+    flex: 0 1 45%;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-self: center;
+    margin-right: -150px;
+    max-width: 800px;
+
+    position: relative;
+
+    @media (max-width: $width-desktop) {
+      flex-basis: 50%;
+      margin-right: -100px;
+    }
+
+    @media (max-width: $width-laptop) {
+      flex-basis: 38.2%;
+      margin-right: 0;
+      min-width: 0;
+    }
+
+    @media (max-width: $width-tablet) {
+      align-self: end;
+    }
+
+    @media (max-width: $width-mobile) {
+      align-self: center;
+      max-width: 100%;
+    }
+  }
+
+  &__dog {
+    width: 100%;
+    filter: drop-shadow(0 11.2338px 12.1699px rgba(0, 0, 0, 0.72));
+    animation-name: fadeInRightBig;
+    animation-duration: 1.5s;
+    animation-fill-mode: both;
+
+    @media (max-width: $width-laptop) {
+      width: 522px;
+    }
+
+    @media (max-width: $width-mobile) {
+      width: 355px;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @media (max-width: $width-desktop) {
+      gap: 25px;
+    }
+
+    @media (max-width: $width-mobile) {
+      gap: 20px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    text-shadow: 2px 2px 1px #EFF26F;
+
+    position: relative;
+
+    color: $color-basic;
+    @include font(normal, 400, 4rem, 100%);
+
+    @media (max-width: $width-desktop) {
+      font-size: 3.2rem;
+    }
+
+    @media (max-width: $width-mobile) {
+      font-size: 2.4rem;
+      line-height: 2.8rem;
+    }
+
+    &:before {
+      content: url("./assets/images/icons/paw.svg");
+      margin-right: 20px;
+    }
+
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $width-mobile) {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 22px;
+    }
+  }
+
+  &__video {
+    display: flex;
+    gap: 32px;
+    font-family: $font-family-additional;
+    align-items: center;
+    justify-content: center;
+    @include font(normal, 700, 4rem, normal);
+    text-shadow: 2px 2px 2px $color-additional;
+    transition: 0.3s all;
+
+    @media (max-width: $width-mobile) {
+      font-size: 3rem;
+      text-align: end;
+    }
+
+    &-img {
+      height: 120px;
+      transition: 0.3s all;
+
+      @media (max-width: $width-desktop) {
+        height: 100px;
+      }
+
+      @media (max-width: $width-mobile) {
+        height: 80px;
+      }
+    }
+
+    &:hover {
+      text-decoration: underline;
+
+      &>.main__video-img {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+.speech {
+  padding: 38px 60px 58px 60px;
+  width: 370px;
+
+  background: url("./assets/images/main-page/speak-window.svg") center / contain no-repeat;
+  position: absolute;
+  bottom: 89%;
+  left: 2%;
+  z-index: 2;
+
+  animation-name: zoomIn;
+  animation-duration: 1.5s;
+  animation-fill-mode: both;
+  animation-delay: 1.5s;
+
+  @media (max-width: $width-desktop) {
+    padding: 41px 32px 53px;
+    width: 256px;
+
+    bottom: 86%;
+  }
+
+  @media (max-width: $width-laptop) {
+    padding: 43px 32px 45px;
+    width: 295px;
+  }
+
+  @media (max-width: $width-tablet) {
+    transform: rotate(180deg);
+
+    padding: 21px 32px 45px;
+    bottom: 11%;
+    left: -35%;
+  }
+
+  @media (max-width: $width-mobile) {
+    transform: rotate(0);
+    bottom: 90%;
+    width: 217px;
+    left: -4%;
+    padding-bottom: 30px;
+  }
+
+  &__text {
+    color: $color-basic;
+    font-family: $font-family-additional;
+    @include font(normal, 400, 3rem, 110%);
+    text-align: center;
+
+    @media (max-width: $width-desktop) {
+      font-size: 2.2rem;
+    }
+
+    @media (max-width: $width-laptop) {
+      font-size: 2.5rem;
+    }
+
+    @media (max-width: $width-tablet) {
+      transform: rotate(180deg);
+    }
+
+    @media (max-width: $width-mobile) {
+      transform: rotate(0);
+      font-size: 1.8rem;
+    }
+  }
+}
+
+@keyframes fadeInRightBig {
+  0% {
+    opacity: 0;
+    transform: translate3d(2000px, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(.3, .3, .3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}

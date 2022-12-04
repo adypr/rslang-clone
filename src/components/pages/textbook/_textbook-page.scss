@@ -1,0 +1,479 @@
+.textbook {
+    background: url("./assets/images/textbook/cloud-right.png") right 112%, url("./assets/images/textbook/cloud-left.png") left 112%, url("./assets/images/textbook/textbook-background.jpg") center;
+    background-repeat: no-repeat;
+    background-size: 75vh auto, 75vh auto, cover;
+    flex-grow: 1;
+    padding: 24px 50px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: $width-max) {
+        background-image: url("./assets/images/textbook/textbook-background.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+
+    @media (max-width: $width-tablet) {
+        background: url("./assets/images/textbook/cloud-min-right.png") right 105%, url("./assets/images/textbook/cloud-min-left.png") left 105%, url("./assets/images/textbook/textbook-background.jpg") center;
+        background-repeat: no-repeat;
+        background-size: auto, auto, cover;
+    }
+
+    @media (max-width: $width-mobile) {
+        background-image: url("./assets/images/textbook/textbook-background.jpg");
+        background-position: center;
+        background-size: cover;
+        padding-left: 11px;
+        padding-right: 11px;
+        padding-bottom: 0;
+    }
+
+
+&__wrapper {
+    max-width: 1470px;
+
+    @media (max-width: $width-desktop) {
+        max-width: 870px;
+    }
+}
+
+
+&__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "heading categories categories categories"
+                         "dog categories categories categories";
+    justify-content: center;
+    gap: 1.41vw;
+
+    @media (max-width: $width-desktop) {
+        display: block;
+    }
+
+    @media (max-width: $width-mobile) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+&__heading {
+    @include font(normal, 700, 6rem, 6rem);
+    font-family: $font-family-additional;
+    grid-area: heading;
+    text-align: center;
+
+    @media (max-width: $width-desktop) {
+       font-size: 5rem;
+       line-height: 5rem;
+       margin-bottom: 24px;
+    }
+
+    @media (max-width: $width-mobile) {
+        font-size: calc(5.6vw + 12px);
+        line-height: calc(6vw + 12px);
+        
+    }
+}
+
+
+&__image {
+   width: calc(13vw + 160px);
+  
+    display: block;
+    height: fit-content;
+    grid-area: dog;
+
+    @media (max-width: $width-desktop) {
+        display: none;
+    }
+
+    @media (max-width: $width-mobile) {
+        display: block;
+        width: calc(21vw + 160px);
+        height: calc(11.5vw + 130px);
+        order: 2;
+        
+        
+    }
+}
+
+&__dog {
+    width: 100%;
+    @media (max-width: $width-mobile) {
+        width: calc(21vw + 160px);
+        position: relative;
+        top: calc(-11.5vw - 10px);
+    }
+
+}
+
+&__hard {
+    display: none;
+}
+
+&__cloud {
+    position: absolute;
+    z-index: 2;
+    top: 4px;
+    width: 100%;
+    flex-shrink: 0;
+    height: 87px;
+    background: url("./assets/images/textbook/hard.png") no-repeat;
+    background-size: contain;
+
+    @media (max-width: $width-desktop) {
+        top: -23px;
+        transform: scale(-1, -1);
+    }
+
+    @media (max-width: $width-mobile) {
+        transform: scale(1, -1);
+        top: -15px;
+    }
+}
+
+&__content {
+    grid-area: categories;
+
+    @media (max-width: $width-mobile) {
+        position: relative;
+        z-index: 5;
+    }
+}
+
+&__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 30px;
+    column-gap: 2.55vw;
+    row-gap: 40px;
+
+    @media (max-width: $width-desktop) {
+      gap: 30px;
+      padding-left: 0;
+    }
+
+    @media (max-width: $width-mobile) {
+        gap: 15px;
+    }
+}
+
+&__item {
+    width: 270px;
+    height: 240px;
+    background-repeat: no-repeat;
+    transition: 0.2s ease;
+    background-size: contain;
+    background-position: center;
+
+    &:hover {
+        transform: rotate(-5deg) scale(1.04);
+    }
+
+    @media (max-width: $width-mobile) {
+        width: calc(20vw + 68px);
+        height: calc(15.5vw + 68px);
+    }
+
+
+    &-a1 {
+        background-image: url("./assets/images/textbook/category-a1.png");
+    }
+
+    &-a2 {
+        background-image: url("./assets/images/textbook/category-a2.png");
+    }
+
+    &-b1 {
+        background-image: url("./assets/images/textbook/category-b1.png");
+    }
+
+    &-b2 {
+        background-image: url("./assets/images/textbook/category-b2.png");
+    }
+    &-c1 {
+        background-image: url("./assets/images/textbook/category-c1.png");
+    }
+    &-c2 {
+        background-image: url("./assets/images/textbook/category-c2.png");
+    }
+
+}
+
+&__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 30px 38px 45px;
+    
+    @media (max-width: $width-mobile) {
+        padding: 25px 20px 26px;
+    }
+}
+
+&__title {
+    @include font(normal, 400, 5.4rem, 5.4rem);
+    font-family: $font-family-additional;
+
+    @media (max-width: $width-mobile) {
+        font-size: calc(1.1vw + 45px);
+        line-height: calc(1.1vw + 45px);
+    }
+
+}
+&__subtitle {
+    @include font(normal, 700, 3rem, 3.5rem);
+    margin: 0 10px 10px;
+
+    @media (max-width: $width-mobile) {
+        font-size: calc(1.1vw + 11px);
+        line-height: calc(1.1vw + 13px);
+    }
+
+}
+
+&__description {
+    @include font(normal, 400, 1.8rem, 2rem);
+    text-align: center;
+
+    @media (max-width: $width-mobile) {
+        display: none;
+    }
+
+}
+}
+
+
+.authorized {
+    &-textbook {
+        background: url("./assets/images/textbook/cloud-right.png") right 112%, url("./assets/images/textbook/cloud-left.png") left 112%, url("./assets/images/textbook/textbook-background.jpg") center;
+        background-repeat: no-repeat;
+        background-size: 75vh auto, 75vh auto, cover;
+        flex-grow: 1;
+        padding: 24px 40px 24px 30px;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        @media (max-width: $width-max) {
+            background-image: url("./assets/images/textbook/textbook-background.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+    
+        @media (max-width: $width-desktop) {
+            background: url("./assets/images/textbook/cloud-middle-right.png") right 110%, url("./assets/images/textbook/cloud-middle-left.png") left 110%, url("./assets/images/textbook/textbook-background.jpg") center;
+            background-repeat: no-repeat;
+            background-size: auto, auto, cover;
+        }
+    
+        @media (max-width: 939px) {
+            background: url("./assets/images/textbook/cloud-min-right.png") right 105%, url("./assets/images/textbook/cloud-min-left.png") left 105%, url("./assets/images/textbook/textbook-background.jpg") center;
+            background-repeat: no-repeat;
+            background-size: auto, auto, cover;
+            padding-bottom: 0;
+        }
+    
+        @media (max-width: $width-mobile) {
+            background-image: url("./assets/images/textbook/textbook-background.jpg");
+            background-position: center;
+            background-size: cover;
+            padding-left: 11px;
+            padding-right: 11px;
+            padding-bottom: 0;
+        }
+    
+    
+        &__wrapper {
+            max-width: 1470px;
+    
+            @media (max-width: $width-desktop) {
+                max-width: 870px;
+            }
+            @media (max-width: $width-mobile) {
+                max-width: 617px;
+            }
+        }
+    
+    
+        &__container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-areas: "heading categories categories categories"
+                                "dog categories categories categories";
+            justify-content: center;
+            gap: 1.41vw;
+    
+            @media (max-width: $width-desktop) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+    
+        }
+    
+        &__heading {
+            @include font(normal, 700, calc(2rem + 30px), 6rem);
+            font-family: $font-family-additional;
+            grid-area: heading;
+            text-align: center;
+    
+            @media (max-width: $width-desktop) {
+            font-size: 5rem;
+            line-height: 5rem;
+            margin-bottom: 24px;
+            }
+    
+            @media (max-width: $width-mobile) {
+                font-size: calc(5.6vw + 12px);
+                line-height: calc(6vw + 12px);
+                
+            }
+        }
+    
+    &__image {
+        width: calc(10.8vw + 187px);
+        display: flex;
+        gap: 1.5vw;
+        flex-direction: column;
+        align-items: center;
+        grid-area: dog;
+    
+    
+        @media (max-width: $width-desktop) {
+           order: 2;
+           flex-direction: row;
+           justify-content: center;
+           height: calc(10vw + 40px);
+        }
+    
+        @media (max-width: $width-tablet) {
+            height: calc(10vw + 70px);
+        }
+    
+        @media (max-width: $width-mobile) {
+            position: relative;
+            top: 20px;
+            flex-direction: column;
+            width: calc(21vw + 160px);
+            height: 240px;
+        }
+    }
+    
+    &__dog {
+        position: relative;
+        width: 100%;
+        align-self: flex-end;
+        padding-left: 5px;
+        padding-right: 5px;
+        z-index: 0;
+
+        @media (max-width: $width-desktop) {
+            width: 326px;
+        }
+        
+        @media (max-width: $width-mobile) {
+            width: 228px;
+            position: relative;
+            top: -50px;
+            order: 2;
+        }
+    
+    }
+    
+    &__hard {
+        position: relative;
+        width: 336px;
+        height: 87px;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        padding-bottom: 8px;
+        transition: 0.2s ease;
+    
+        &:hover {
+            cursor: pointer;
+            animation-name: bounceIn; 
+            animation-duration: .75s;
+            animation-fill-mode: both;
+        }
+    
+        @media (max-width: $width-desktop) {
+            padding-bottom: 50px;
+            align-self: flex-end;
+        }
+    
+        @media (max-width: $width-mobile) {
+            width: 100%;
+            height: 65px;
+            max-width: 261px;
+            padding-bottom: 0;
+            top: 8px;
+        }
+        
+        .textbook__subtitle {
+            margin: 0;
+            z-index: 10;
+            font-size: 30px;
+    
+            @media (max-width: $width-mobile) {
+                font-size: 26px;
+                margin-bottom: 26px;
+            }
+        }
+    
+        .textbook__description {
+            z-index: 9;
+            display: block;
+    
+            @media (max-width: $width-mobile) {
+                display: none;
+            }
+        }
+    }
+    
+    &__content {
+        grid-area: categories;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 20px;
+        z-index: 5;
+    
+        @media (max-width: $width-desktop) {
+            padding-left: 0;
+        }
+    
+        @media (max-width: $width-mobile) {
+            position: relative;
+        }
+    }
+}
+}
+
+
+@keyframes bounceIn {
+    0% {
+        transform: scale3d(1, 1, 1);
+      }
+    
+      50% {
+        transform: scale3d(1.05, 1.05, 1.05);
+      }
+    
+      100% {
+        transform: scale3d(1, 1, 1);
+      }
+  }

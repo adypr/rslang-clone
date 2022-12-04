@@ -1,0 +1,48 @@
+@import 'constants';
+
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Balsamiq+Sans:wght@400;700&display=swap');
+
+html {
+  font-size: 10px;
+  font-family: $font-family-basic;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  max-width: $width-max;
+  margin: 0 auto;
+}
+
+.heading {
+  font-family: $font-family-additional;
+  @include font(normal, 700, 8rem, 100%);
+
+  @media (max-width: $width-desktop) {
+    font-size: 6rem;
+  }
+
+  @media (max-width: $width-mobile) {
+    font-size: 3.4rem;
+  }
+}
+
+.text {
+  @include font(normal, 400, 2.2rem, auto);
+
+  @media (max-width: $width-mobile) {
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+  }
+}
+
+.hidden {
+  overflow: hidden;
+}
+
+
+

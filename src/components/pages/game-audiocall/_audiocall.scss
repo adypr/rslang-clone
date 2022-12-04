@@ -1,0 +1,357 @@
+@import '../../styles/base/constants';
+
+.audiocall {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 0;
+  background: url("./assets/images/game-audiocall/audiocall-bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: calc(100vh - #{$header-height} - #{$footer-height});
+
+  @media (max-width: $width-mobile) {
+    min-height: calc(100vh - #{$header-height} - #{$footer-mobile-height});
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.audiocall-game {
+  width: 829px;
+  height: 560px;
+
+  background: url("./assets/images/game-audiocall/audiocall-game-bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+
+  box-shadow: 10px 10px $color-basic;
+  border: 20px solid $color-additional;
+
+  @media (max-width: $width-tablet) {
+    width: 540px;
+    height: 740px;
+  }
+
+  @media (max-width: 400px) {
+    border-left: 0;
+    border-right: 0;
+    box-shadow: 0 10px $color-basic;
+  }
+
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 12px;
+
+    border: 5px solid $color-basic;
+
+    @media (max-width: $width-tablet) {
+      flex-direction: column;
+      justify-content: flex-end;
+      padding-bottom: 20px;
+
+      position: relative;
+    }
+  }
+
+  &__container {
+    flex-basis: 52%;
+
+    @media (max-width: $width-tablet) {
+      position: absolute;
+      top: 20px;
+    }
+  }
+
+  &__listening {
+    display: flex;
+    flex-direction: column;
+    padding-left: 17%;
+
+    @media (max-width: $width-tablet) {
+      padding-left: 0;
+    }
+  }
+
+  &__listening-button-wrapper {
+    background: url("./assets/images/game-audiocall/button-bg.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 255px;
+    height: 218px;
+  }
+
+  &__listening-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background-color: $color-button-audiocall;
+      transition: all 0.2s;
+      margin: 59px 100px 69px 64px;
+     
+      &>.btn-listen__img {
+        width: 48px;
+        filter: $filter-button-audiocall-dark-accent;
+      }
+    
+      &:hover {
+        background-color: $color-button-audiocall-accent;
+        cursor: pointer;
+      }
+    
+      &.active {
+        background-color: $color-button-audiocall-active;
+    
+        &>.btn-listen__img {
+          filter: invert(100%);
+        }
+      }
+    }
+
+  &__dog {
+    filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.5));
+  }
+}
+
+.audiocall-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
+  flex-basis: 38%;
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+
+    @media (max-width: $width-tablet) {
+      flex-wrap: wrap;
+      flex-direction: initial;
+      justify-content: center;
+      gap: 4px;
+      padding: 0 10px;
+    }
+
+    @media (max-width: $width-mobile) {
+      gap: 1px;
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    width: 298px;
+    height: 77px;
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 11px;
+
+    cursor: pointer;
+
+    @media (max-width: $width-tablet) {
+      width: 228px;
+      height: 58px;
+    }
+
+    @media (max-width: $width-mobile) {
+      width: 198px;
+      height: 51px;
+      padding-bottom: 6px;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    &_bg {
+      fill: $color-additional;
+      transition: fill 0.2s linear;
+    }
+  }
+
+  &__text {
+    @include font(normal, 700, 2.4rem, 100%);
+    color: $color-basic;
+    text-align: center;
+    padding: 0 10px;
+    position: relative;
+
+    @media (max-width: $width-tablet) {
+      font-size: 1.7rem;
+    }
+
+    @media (max-width: $width-mobile) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__button {
+    width: 259px;
+    padding: 14px 0;
+    background-color: $color-button-audiocall;
+    border: 4px solid $color-game;
+    @include font(normal, 700, 2.4rem, 100%);
+    color: $color-basic;
+    transition: background-color 0.3s linear;
+
+    &:hover {
+      background-color: $color-button-audiocall-accent;
+    }
+
+    &:active {
+      background-color: $color-button-audiocall-active;
+    }
+
+    @media (max-width: $width-mobile) {
+      width: 200px;
+      padding: 10px 0;
+      font-size: 1.6rem;
+      border-width: 3px;
+    }
+  }
+}
+
+.audiocall-results {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @media (max-width: $width-tablet) {
+    gap: 15px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+
+    @media (max-width: $width-mobile) {
+      gap: 4px;
+    }
+  }
+
+  &__name {
+    @include font(normal, 700, 3.4rem, 3.9rem);
+    color: $color-basic;
+  }
+
+  &__listening {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__translation,
+  &__transcription {
+    @include font(normal, 400, 2.2rem, 2.5rem);
+    color: $color-basic;
+  }
+
+  &__picture {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__image {
+    display: block;
+    // width: 100%;
+    max-width: 100%;
+    max-height: 260px;
+
+    @media (max-width: $width-tablet) {
+      max-height: 245px;
+    }
+
+    @media (max-width: $width-mobile) {
+      max-width: 300px;
+      max-height: 200px;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: $color-button-audiocall;
+    transition: all 0.2s;
+   
+    &>.btn-listen__img {
+      filter: $filter-button-audiocall-dark-accent;
+    }
+  
+    &:hover {
+      background-color: $color-button-audiocall-accent;
+      cursor: pointer;
+    }
+  
+    &.active {
+      background-color: $color-button-audiocall-active;
+  
+      &>.btn-listen__img {
+        filter: invert(100%);
+      }
+    }
+  }
+}
+
+.right .audiocall-content__image_bg {
+  fill: $color-game-right;
+}
+
+.wrong .audiocall-content__image_bg {
+  fill: $color-game-wrong;
+}
+
+.results {
+  width: 940px;
+  height: 640px;
+
+  @media (max-width: $width-tablet) {
+    width: 740px;
+  }
+
+  @media (max-width: $width-mobile) {
+    min-height: 1019px;
+  }
+}
+
+.no-events {
+  pointer-events: none;
+}
+
+

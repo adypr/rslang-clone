@@ -1,0 +1,231 @@
+.team {
+    background: url("./assets/images/team/team-background.jpg") no-repeat center;
+    background-size: cover;
+    flex-grow: 1;
+
+    @media (max-width: 450px) {
+        background-image: none;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 35px;
+        padding-right: 35px;
+
+        @media (max-width: $width-desktop) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        @media (max-width: 450px) {
+            padding-left: 3vw;
+            padding-right: 3vw;
+        }
+
+    }
+
+    &__heading {
+        background-color: #ADE2FF;
+        border: 5px solid #000000;
+        @include font(normal, 700, 3.4rem, 3.9rem);
+        text-align: center;
+        padding: 13px 122px;
+
+        @media (max-width: $width-max) {
+            padding-left: 6.2vw;
+            padding-right: 6.2vw;
+        }
+
+        @media (max-width: 450px) {
+            width: 100%;
+            max-width: 313px;
+            font-size: 3.28rem;
+            
+        }
+    }
+
+    &__content {
+        background-color: $color-additional;
+        text-align: center;
+        padding: 25px;
+        margin-bottom: 2.9vw;
+
+        @media (max-width: $width-mobile) {
+            max-width: 432px;
+        }
+
+        @media (max-width: 450px) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        margin-bottom: 24px;
+
+        @media (max-width: 1360px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: $width-mobile) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 382px;
+        min-width: 305px;
+        padding: 28px 18px 26px;
+        box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.25);
+        background-size: cover;
+
+        &:nth-child(1) {
+            background-color: #EAD6FF;
+            background-image: url('./assets/images/team/team-card1.jpg');
+        }
+        &:nth-child(2) {
+            background-color: #AEE042;
+            background-image: url('./assets/images/team/team-card2.jpg');
+        }
+        &:nth-child(3) {
+            background-color: #FFC680;
+            background-image: url('./assets/images/team/team-card3.jpg');
+        }
+        &:nth-child(4) {
+            background-color: #FFB9B7;
+            background-image: url('./assets/images/team/team-card4.jpg');
+        }
+    }
+
+    &__name {
+        @include font(normal, 400, 3.2rem, 3.2rem);
+        font-family: $font-family-additional;
+        margin: 8px 0 28px;
+
+    }
+
+    &__img {
+        margin-bottom: 8px;
+    }
+
+    &__link {
+        display: block;
+        background: url("./assets/images/team/git-logo.svg") no-repeat left center;
+        background-size: contain;
+        height: 3.5rem;
+        padding-left: 5.1rem;
+        @include font(normal, 400, 2.2rem, 2.5rem);
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 26px;
+    }
+
+    &__cloud {
+        background-color: #FEFEFE;
+        border: 3px solid #000000;
+        border-radius: 31px;
+        border-top-right-radius: 0;
+        @include font(normal, 400, 1.6rem, 1.8rem);
+        padding: 6px 6px 6px 14px;
+        position: relative;
+        margin-bottom: 17px;
+        text-align: left;
+        height: 108px;
+
+        @media (max-width: 1646px) {
+            height: 128px;
+        }
+
+        @media (max-width: 1360px) {
+            height: 108px;
+        }
+
+        @media (max-width: 816px) {
+            height: 128px;
+        }
+
+        @media (max-width: $width-mobile) {
+            height: 108px;
+        }
+
+        @media (max-width: 383px) {
+            height: 128px;
+        }
+
+        &:after {
+            display: block;
+            position: absolute;
+            content: '';
+            background: url("./assets/images/team/cloud-corner.png") no-repeat;
+            height: 32px;
+            width: 24px;
+            top: -31px;
+            right: -3px;
+        }
+
+    }
+
+    &__description {
+        @include font(normal, 400, 1.8rem, 2rem);
+        text-align: left;
+        padding-left: 1px;
+        padding-right: 1px;
+
+        @media (max-width: 1652px) {
+            height: 120px;
+        }
+
+        @media (max-width: 1360px) {
+            height: 100px;
+        }
+
+        @media (max-width: 818px) {
+            height: 120px;
+        }
+        
+        @media (max-width: $width-mobile) {
+            height: 100px;
+        }
+
+        @media (max-width: 351px) {
+            height: 120px;
+        }
+
+    }
+
+    &__button {
+        background-color: #0056D8;
+        color: #FFFFFF;
+        padding: 16px 52px;
+        border: 4px solid #000000;
+        border-radius: 10px;
+        @include font(normal, 700, 2.8rem, 2.8rem);
+
+        &_big {
+            @media (max-width: $width-mobile) {
+                display: none;
+            }
+        }
+
+        &_small {
+            display: none;
+            @media (max-width: $width-mobile) {
+                display: inline;
+            }
+
+        }
+    }
+
+}

@@ -1,0 +1,61 @@
+$width-max: 1920px;
+$width-desktop: 1366px;
+$width-laptop: 1199px;
+$width-tablet: 1023px;
+$width-mobile: 700px;
+
+$indent-basic: 40px;
+
+$header-height: 82px;
+$footer-height: 82.5px;
+$footer-mobile-height: 139.5px;
+
+$font-family-basic: 'Arimo', 'Arial', sans-serif;
+$font-family-additional: 'Balsamiq Sans', 'Comic Sans', cursive;
+
+
+$color-basic: #000000;
+$color-additional: #FFFFFF;
+$color-additional-dark: #8C8C8C;
+
+$color-button-basic-hover: #DDF3FF;
+$color-button-basic-active: #ADE2FF;
+
+$color-button-additional: #0056D8;
+$color-button-additional-hover: #0095E9;
+$color-button-additional-active: #00B1E9;
+$color-mobile-menu: #ADE2FF;
+
+$color-link-basic-active: #4F0000;
+
+$color-button-audiocall-accent: #EF8911;
+$color-button-audiocall: #FAD243;
+$color-button-audiocall-active: #F1A64E;
+$filter-button-audiocall-dark-accent: invert(11%) sepia(67%) saturate(3695%) hue-rotate(42deg) brightness(97%) contrast(102%);
+$color-game: #482800;
+
+$color-sprint-btn: #F4A3A3;
+$color-sprint-btn-accent: #FF5353;
+$color-sprint-btn-active: #FF7878;
+$color-sprint-dark: #AE0404;
+$color-sprint-dark-accent: #5E0000;
+$filter-sprint-dark-accent: invert(8%) sepia(48%) saturate(6387%) hue-rotate(8deg) brightness(93%) contrast(116%);
+$color-sprint-btn-correct: #80F17E;
+$color-sprint-btn-correct-accent: #04CD00;
+$color-sprint-btn-correct-active: #3BE038;
+$color-sprint-btn-correct-dark-accent: #014500;
+
+$color-game-right: #C3F9B0;
+$color-game-wrong: #FFCBB5;
+
+$color-bg-heading-stat-stat: #FFCE22;
+$color-bg-heading-stat-prog: #FF9261;
+$color-bg-items-stat: #FFEDAC;
+
+
+@mixin font($style, $weight, $size, $height) {
+  font-style: $style;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+}

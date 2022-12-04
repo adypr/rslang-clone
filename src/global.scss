@@ -1,0 +1,19 @@
+@import 'components/styles/base/reset';
+@import 'components/styles/base/constants';
+@import 'components/styles/base/base';
+
+@import 'components/styles/components/buttons';
+@import 'components/styles/components/links';
+
+@import 'components/header/header';
+@import 'components/footer/footer';
+@import 'components/popups/popups';
+@import 'components/pages/main-page/main-page';
+@import 'components/pages/textbook/textbook-page';
+@import 'components/preloader/preloader';
+@import 'components/pages/vocabulary/vocabulary';
+@import 'components/pages/team/team-page';
+@import 'components/pages/game-common/game-common';
+@import 'components/pages/game-audiocall/audiocall';
+@import 'components/pages/game-sprint/sprint';
+@import 'components/pages/statistics/statistics';

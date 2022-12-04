@@ -1,0 +1,342 @@
+@import '../../styles/base/constants';
+
+.sprint {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 0;
+  background: url("./assets/images/game-sprint/sprint-bg-bomb.png") no-repeat,
+    url("./assets/images/game-sprint/sprint-bg-clock.png") no-repeat, 
+    url("./assets/images/game-sprint/sprint-bg.jpg") no-repeat;
+  background-size: auto, auto, cover;
+  background-position: 0 10%, 100% 90%, center;
+  min-height: calc(100vh - #{$header-height} - #{$footer-height});
+
+  @media (max-width: $width-mobile) {
+    min-height: calc(100vh - #{$header-height} - #{$footer-mobile-height});
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.sprint-game {
+  width: 900px;
+  height: 640px;
+
+  background: url("./assets/images/game-sprint/sprint-game-bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+
+  box-shadow: 10px 10px $color-basic;
+  border: 20px solid $color-additional;
+
+  @media (max-width: $width-mobile) {
+    height: auto;
+  }
+
+  @media (max-width: 400px) {
+    width: 100%;
+    min-width: auto;
+    border-left: 0;
+    border-right: 0;
+    box-shadow: 0 10px $color-basic;
+  }
+
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+    padding-bottom: 12px;
+
+    border: 5px solid $color-basic;
+
+    @media (max-width: $width-mobile) {
+      gap: 24px;
+      padding: 16px;
+    }
+  }
+
+  &__hud {
+    display: flex;
+    justify-content: space-around;
+
+    @media (max-width: $width-mobile) {
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    @media (max-width: 540px) {
+      gap: 16px;
+    }
+  }
+
+  &__word {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    column-gap: 16px;
+    row-gap: 8px;
+
+    @media (max-width: $width-mobile) {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.sprint-score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  &__label {
+    font-family: $font-family-additional;
+    @include font(normal, 400, 3rem, normal);
+
+    @media (max-width: $width-mobile) {
+      display: none;
+    }
+  }
+
+  &__img {
+    width: 165px;
+    height: 94px;
+
+    @media (max-width: $width-mobile) {
+      width: 140px;
+      height: 80px;
+    }
+
+    &.x1 {
+      background: url("./assets/images/game-sprint/sprint-combo-x1.png") no-repeat center/cover;
+    }
+
+    &.x2 {
+      background: url("./assets/images/game-sprint/sprint-combo-x2.png") no-repeat center/cover;
+    }
+
+    &.x4 {
+      background: url("./assets/images/game-sprint/sprint-combo-x4.png") no-repeat center/cover;
+    }
+
+    &.x8 {
+      background: url("./assets/images/game-sprint/sprint-combo-x8.png") no-repeat center/cover;
+    }
+  }
+
+  &__number {
+    font-family: $font-family-additional;
+    @include font(normal, 400, 5.4rem, normal);
+    margin-top: -8px;
+
+    @media (max-width: $width-mobile) {
+      font-size: 4rem;
+    }
+  }
+}
+
+.sprint-resleeng-img {
+  width: 301px;
+  height: 350px;
+  margin-top: -8px;
+  margin-left: -24px;
+
+  @media (max-width: $width-mobile) {
+    width: 200px;
+    height: 230px;
+  }
+
+  @media (max-width: 540px) {
+    order: 1;
+  }
+
+  &.x1 {
+    background: url("./assets/images/game-sprint/sprint-bonus-art-x1.png") no-repeat center/cover;
+  }
+
+  &.x2 {
+    background: url("./assets/images/game-sprint/sprint-bonus-art-x2.png") no-repeat center/cover;
+  }
+
+  &.x4 {
+    background: url("./assets/images/game-sprint/sprint-bonus-art-x4.png") no-repeat center/cover;
+  }
+
+  &.x8 {
+    background: url("./assets/images/game-sprint/sprint-bonus-art-x8.png") no-repeat center/cover;
+  }
+}
+
+.sprint-time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  &__label {
+    font-family: $font-family-additional;
+    @include font(normal, 400, 3rem, normal);
+
+    @media (max-width: $width-mobile) {
+      display: none;
+    }
+  }
+
+  &__number {
+    width: 160px;
+    height: 168px;
+    background: url("./assets/images/game-sprint/sprint-time-left-bg.png") no-repeat center/cover;
+    font-family: $font-family-additional;
+    @include font(normal, 400, 5.4rem, normal);
+    padding: 57px 0 51px;
+    text-align: center;
+
+    @media (max-width: $width-mobile) {
+      font-size: 4rem;
+      width: 120px;
+      height: 125px;
+      padding: 43px 0 38px;
+    }
+  }
+}
+
+.sprint-word-en {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 16px;
+
+  &__text {
+    @include font(normal, 700, 4rem, normal);
+    margin-left: 56px;
+
+    @media (max-width: $width-mobile) {
+      font-size: 2.8rem;
+      margin-left: 46px;
+    }
+  }
+}
+
+.sprint-word-en__btn-listen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: $color-sprint-btn;
+  transition: all 0.2s;
+
+  @media (max-width: $width-mobile) {
+    width: 30px;
+    height: 30px;
+  }
+
+  &>.btn-listen__img {
+    filter: $filter-sprint-dark-accent;
+
+    @media (max-width: $width-mobile) {
+      width: 17px;
+    }
+  }
+
+  &:hover {
+    background-color: $color-sprint-btn-accent;
+    cursor: pointer;
+  }
+
+  &.active {
+    background-color: $color-sprint-dark-accent;
+
+    &>.btn-listen__img {
+      filter: invert(100%);
+    }
+  }
+}
+
+.sprint-word-ru {
+  @include font(normal, 400, 3.4rem, normal);
+  text-align: center;
+
+  @media (max-width: $width-mobile) {
+    font-size: 2.4rem;
+  }
+}
+
+.sprint-button__wrong {
+  width: 200px;
+  padding: 14px 0;
+  background-color: $color-sprint-btn;
+  border: 4px solid $color-sprint-dark-accent;
+  @include font(normal, 700, 2.4rem, 100%);
+  color: $color-basic;
+  transition: background-color 0.3s linear;
+
+  @media (max-width: $width-mobile) {
+    font-size: 1.6rem;
+    padding: 8px 0;
+    border-width: 3px;
+  }
+
+  &:hover {
+    background-color: $color-sprint-btn-accent;
+  }
+
+  &:active {
+    background-color: $color-sprint-btn-active;
+  }
+}
+
+.sprint-button__correct {
+  width: 200px;
+  padding: 14px 0;
+  background-color: $color-sprint-btn-correct;
+  border: 4px solid $color-sprint-btn-correct-dark-accent;
+  @include font(normal, 700, 2.4rem, 100%);
+  color: $color-basic;
+  transition: background-color 0.3s linear;
+
+  @media (max-width: $width-mobile) {
+    font-size: 1.6rem;
+    padding: 8px 0;
+    border-width: 3px;
+  }
+
+  &:hover {
+    background-color: $color-sprint-btn-correct-accent;
+  }
+
+  &:active {
+    background-color: $color-sprint-btn-correct-active;
+  }
+}
+
+.results {
+  width: 940px;
+  height: 640px;
+
+  @media (max-width: $width-tablet) {
+    width: 740px;
+  }
+
+  @media (max-width: $width-mobile) {
+    min-height: 1019px;
+  }
+}

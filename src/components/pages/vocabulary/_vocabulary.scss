@@ -1,0 +1,1007 @@
+.vocab {
+  display: flex;
+  justify-content: center;
+
+  z-index: 0;
+  background: center / cover no-repeat;
+  min-height: calc(100vh - #{$header-height} - #{$footer-height});
+
+  @media (max-width: $width-mobile) {
+    min-height: calc(100vh - #{$header-height} - #{$footer-mobile-height});
+  }
+
+  &.a1 {
+    background-image: url("./assets/images/vocabulary/background-a1.svg");
+
+    & .words-page__return::after {
+      content: "A1";
+    }
+
+    & .words-page__games {
+      background-image: url("./assets/images/vocabulary/resleeng-a1.png");
+    }
+
+    & .word-display__box {
+      background-image: url("./assets/images/vocabulary/word-display-background-a1.png");
+    }
+  }
+
+  &.a2 {
+    background-image: url("./assets/images/vocabulary/background-a2.svg");
+
+    & .words-page__return::after {
+      content: "A2";
+    }
+
+    & .words-page__games {
+      background-image: url("./assets/images/vocabulary/resleeng-a2.png");
+    }
+
+    & .word-display__box {
+      background-image: url("./assets/images/vocabulary/word-display-background-a2.png");
+    }
+  }
+
+  &.b1 {
+    background-image: url("./assets/images/vocabulary/background-b1.svg");
+
+    & .words-page__return::after {
+      content: "B1";
+    }
+
+    & .words-page__games {
+      background-image: url("./assets/images/vocabulary/resleeng-b1.png");
+    }
+
+    & .word-display__box {
+      background-image: url("./assets/images/vocabulary/word-display-background-b1.png");
+    }
+  }
+
+  &.b2 {
+    background-image: url("./assets/images/vocabulary/background-b2.svg");
+
+    & .words-page__return::after {
+      content: "B2";
+    }
+
+    & .words-page__games {
+      background-image: url("./assets/images/vocabulary/resleeng-b2.png");
+    }
+
+    & .word-display__box {
+      background-image: url("./assets/images/vocabulary/word-display-background-b2.png");
+    }
+  }
+
+  &.c1 {
+    background-image: url("./assets/images/vocabulary/background-c1.svg");
+
+    & .words-page__return::after {
+      content: "C1";
+    }
+
+    & .words-page__games {
+      background-image: url("./assets/images/vocabulary/resleeng-c1.png");
+    }
+
+    & .word-display__box {
+      background-image: url("./assets/images/vocabulary/word-display-background-c1.png");
+    }
+  }
+
+  &.c2 {
+    background-image: url("./assets/images/vocabulary/background-c2.svg");
+
+    & .words-page__return::after {
+      content: "C2";
+    }
+
+    & .words-page__games {
+      background-image: url("./assets/images/vocabulary/resleeng-c2.png");
+    }
+
+    & .word-display__box {
+      background-image: url("./assets/images/vocabulary/word-display-background-c2.png");
+    }
+  }
+
+  &.hard {
+    background-image: url("./assets/images/vocabulary/background-hard.svg");
+
+    & .words-page__return::after {
+      content: "Сложные слова";
+    }
+
+    & .page-selector,
+    & .page-switch,
+    & .page-selector-block {
+      display: none;
+    }
+
+    & .words-page__games {
+      background-image: url("./assets/images/vocabulary/resleeng-hard.png");
+    }
+
+    & .word-display__box {
+      background-image: url("./assets/images/vocabulary/word-display-background-hard.png");
+    }
+
+    & .word-list {
+      margin-bottom: auto;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    flex: 0 1 100%;
+    justify-content: center;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    max-width: 1380px;
+    width: 97%;
+    margin: 24px auto;
+    min-height: calc(100vh - #{$header-height} - #{$footer-height} - 70px);
+
+    @media (max-width: $width-laptop) {
+      max-width: 1240px;
+      gap: 16px;
+    }
+
+    @media (max-width: $width-tablet) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media (max-width: $width-mobile) {
+      min-height: calc(100vh - #{$header-height} - #{$footer-mobile-height} - 70px);
+    }
+  }
+}
+
+.colors-a1 {
+  --color-main: #FCF1FC;
+  --color-btn: #F3DCFC;
+  --color-accent: #D189E9;
+  --color-dark: #58166E;
+  --color-dark-accent: #3A0E48;
+  --filter-btn: invert(87%) sepia(19%) saturate(262%) hue-rotate(233deg) brightness(98%) contrast(102%);
+  --filter-accent: invert(84%) sepia(32%) saturate(6419%) hue-rotate(218deg) brightness(95%) contrast(93%);
+  --filter-dark: invert(12%) sepia(57%) saturate(4414%) hue-rotate(277deg) brightness(85%) contrast(96%);
+  --filter-dark-accent: invert(13%) sepia(42%) saturate(2118%) hue-rotate(257deg) brightness(90%) contrast(109%);
+}
+
+.colors-a2 {
+  --color-main: #E5F9FF;
+  --color-btn: #BAEEFF;
+  --color-accent: #6ED4F4;
+  --color-dark: #0E6885;
+  --color-dark-accent: #034256;
+  --filter-btn: invert(96%) sepia(78%) saturate(2672%) hue-rotate(171deg) brightness(102%) contrast(103%);
+  --filter-accent: invert(91%) sepia(22%) saturate(4959%) hue-rotate(166deg) brightness(102%) contrast(91%);
+  --filter-dark: invert(14%) sepia(91%) saturate(4101%) hue-rotate(182deg) brightness(99%) contrast(89%);
+  --filter-dark-accent: invert(19%) sepia(25%) saturate(3291%) hue-rotate(162deg) brightness(93%) contrast(98%);
+}
+
+.colors-b1 {
+  --color-main: #D5F6E2;
+  --color-btn: #CEF6D5;
+  --color-accent: #79DD8A;
+  --color-dark: #085C16;
+  --color-dark-accent: #0D3F15;
+  --filter-btn: invert(87%) sepia(34%) saturate(177%) hue-rotate(77deg) brightness(103%) contrast(93%);
+  --filter-accent: invert(86%) sepia(25%) saturate(753%) hue-rotate(68deg) brightness(90%) contrast(92%);
+  --filter-dark: invert(22%) sepia(34%) saturate(3352%) hue-rotate(109deg) brightness(90%) contrast(94%);
+  --filter-dark-accent: invert(19%) sepia(38%) saturate(916%) hue-rotate(78deg) brightness(89%) contrast(98%);
+}
+
+.colors-b2 {
+  --color-main: #FFF2E5;
+  --color-btn: #FFDBBA;
+  --color-accent: #F4AF6E;
+  --color-dark: #87470C;
+  --color-dark-accent: #562B03;
+  --filter-btn: invert(83%) sepia(38%) saturate(379%) hue-rotate(324deg) brightness(103%) contrast(103%);
+  --filter-accent: invert(67%) sepia(49%) saturate(433%) hue-rotate(344deg) brightness(103%) contrast(91%);
+  --filter-dark: invert(26%) sepia(99%) saturate(625%) hue-rotate(354deg) brightness(93%) contrast(95%);
+  --filter-dark-accent: invert(12%) sepia(51%) saturate(4993%) hue-rotate(38deg) brightness(95%) contrast(98%);
+}
+
+.colors-c1 {
+  --color-main: #FFFCE5;
+  --color-btn: #F9EE90;
+  --color-accent: #F5E235;
+  --color-dark: #94760C;
+  --color-dark-accent: #3E2C00;
+  --filter-btn: invert(90%) sepia(8%) saturate(1902%) hue-rotate(359deg) brightness(107%) contrast(95%);
+  --filter-accent: invert(84%) sepia(100%) saturate(452%) hue-rotate(338deg) brightness(102%) contrast(92%);
+  --filter-dark: invert(43%) sepia(32%) saturate(1061%) hue-rotate(9deg) brightness(99%) contrast(95%);
+  --filter-dark-accent: invert(16%) sepia(47%) saturate(1328%) hue-rotate(17deg) brightness(99%) contrast(104%);
+}
+
+.colors-c2 {
+  --color-main: #FFE5E6;
+  --color-btn: #FFBABA;
+  --color-accent: #F46E6E;
+  --color-dark: #850E0E;
+  --color-dark-accent: #560303;
+  --filter-btn: invert(70%) sepia(18%) saturate(2510%) hue-rotate(308deg) brightness(140%) contrast(112%);
+  --filter-accent: invert(53%) sepia(78%) saturate(1874%) hue-rotate(321deg) brightness(107%) contrast(93%);
+  --filter-dark: invert(8%) sepia(61%) saturate(6939%) hue-rotate(358deg) brightness(90%) contrast(92%);
+  --filter-dark-accent: invert(13%) sepia(29%) saturate(3136%) hue-rotate(333deg) brightness(99%) contrast(118%);
+}
+
+.colors-hard {
+  --color-main: #E5EDFF;
+  --color-btn: #BACDFF;
+  --color-accent: #6E94F4;
+  --color-dark: #0C2F87;
+  --color-dark-accent: #031B56;
+  --filter-btn: invert(91%) sepia(21%) saturate(6381%) hue-rotate(187deg) brightness(105%) contrast(111%);
+  --filter-accent: invert(46%) sepia(95%) saturate(1144%) hue-rotate(204deg) brightness(107%) contrast(91%);
+  --filter-dark: invert(14%) sepia(34%) saturate(5347%) hue-rotate(217deg) brightness(102%) contrast(104%);
+  --filter-dark-accent: invert(10%) sepia(30%) saturate(6422%) hue-rotate(218deg) brightness(91%) contrast(105%);
+}
+
+.words-page {
+  width: 832px;
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  min-height: 100%;
+
+  @media (max-width: $width-desktop) {
+    width: 760px;
+  }
+
+  @media (max-width: $width-laptop) {
+    width: 630px;
+  }
+
+  @media (max-width: $width-mobile) {
+    width: 97%;
+  }
+}
+
+.words-page__nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+
+  @media (max-width: $width-mobile) {
+    justify-content: center;
+  }
+}
+
+.words-page__return {
+  display: flex;
+  font-family: $font-family-additional;
+  @include font(normal, 400, 4rem, 110%);
+  filter: var(--filter-dark);
+  gap: 10px;
+
+  @media (max-width: $width-mobile) {
+    gap: 5px;
+    font-size: 2.7rem;
+    height: 16px;
+    line-height: 16px;
+  }
+
+  @media (max-width: 374px) {
+    display: none;
+  }
+
+  &:hover {
+    filter: var(--filter-dark-accent);
+    cursor: pointer;
+  }
+}
+
+
+.page-selector,
+.page-selector-block {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  @media (max-width: $width-desktop) {
+    gap: 2px;
+  }
+
+  @media (max-width: $width-laptop) {
+    gap: 4px;
+  }
+
+  @media (max-width: $width-mobile) {
+    gap: 5px;
+  }
+}
+
+.page-selector-block {
+  @media (max-width: $width-mobile) {
+    width: 280px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.page-selector__btn {
+  position: relative;
+  width: 12px;
+  height: 22px;
+  box-sizing: content-box;
+  border-radius: 4px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--color-dark);
+  background-color: $color-additional;
+
+  &.active {
+    border-width: 4px;
+    border-radius: 8px;
+  }
+
+  &.learned {
+    background: url("./assets/images/icons/checkmark.svg") center no-repeat, var(--color-btn);
+  }
+
+  &::after {
+    content: attr(data-page);
+    @include font(normal, 400, 1.8rem, 110%);
+    width: 30px;
+    bottom: 115%;
+    left: 50%;
+    margin-left: -15px;
+    background-color: var(--color-dark);
+    color: #fff;
+    text-align: center;
+    padding: 3px 0;
+    border-radius: 4px;
+    position: absolute;
+    z-index: 1;
+    display: none;
+  }
+
+  &:hover {
+    background-color: var(--color-accent);
+    cursor: pointer;
+
+    &::after {
+      display: inline-block;
+    }
+  }
+
+
+}
+
+.page-switch {
+  display: flex;
+  width: 165px;
+  justify-content: space-between;
+  font-family: $font-family-basic;
+  @include font(normal, 400, 2.2rem, 110%);
+
+  @media (max-width: $width-laptop) {
+    width: 150px;
+  }
+
+  @media (max-width: $width-laptop) {
+    display: none;
+  }
+}
+
+.page-switch__btn,
+.word-display__btn {
+  display: flex;
+  align-items: center;
+  filter: var(--filter-dark);
+
+  &:hover {
+    filter: var(--filter-dark-accent);
+    cursor: pointer;
+  }
+
+  &.left {
+    transform: rotate(180deg);
+  }
+
+  &.disabled {
+    filter: var(--filter-accent);
+    cursor: auto;
+    pointer-events: none;
+  }
+}
+
+.word-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 8px;
+  margin-top: 10px;
+
+  @media (max-width: $width-desktop) {
+    column-gap: 16px;
+  }
+
+  @media (max-width: $width-mobile) {
+    justify-content: center;
+    column-gap: 10px;
+  }
+
+  &__message {
+    @include font(normal, 400, 1.8rem, 2.5rem);
+    padding-top: 20px;
+  }
+
+  &.learned {
+    outline: 3px dotted var(--color-dark);
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 8px;
+
+    @media (max-width: $width-mobile) {
+      outline: 2px dotted var(--color-dark);
+    }
+  }
+}
+
+.word-list__card {
+  position: relative;
+  background: url("./assets/images/vocabulary/word-card.svg") center / 95% no-repeat, var(--color-main);
+  width: 190px;
+  height: 84px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+  transition: all 0.3s;
+
+  @media (max-width: $width-desktop) {
+    width: 178px;
+    height: 75px;
+  }
+
+  @media (max-width: $width-laptop) {
+    width: 145px;
+    height: 64px;
+  }
+
+  &.active {
+    outline: 2px solid var(--color-dark);
+  }
+
+  &.hard {
+    background-color: var(--color-accent);
+  }
+
+  &.learned {
+    background-color: $color-additional;
+    opacity: 0.7;
+
+    &::after {
+      content: " ";
+      position: absolute;
+      background: url("./assets/images/icons/checkmark.svg") center/contain no-repeat;
+      width: 35px;
+      height: 35px;
+      bottom: 2px;
+      left: 5px;
+    }
+  }
+
+  &:hover {
+    outline: 2px solid var(--color-dark);
+    cursor: pointer;
+    transform: scale(1.04);
+  }
+}
+
+.word-list__english-word {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  @include font(normal, 700, 2rem, normal);
+  height: 50%;
+
+  @media (max-width: $width-desktop) {
+    font-size: 1.8rem;
+  }
+
+  @media (max-width: $width-laptop) {
+    font-size: 1.5rem;
+  }
+}
+
+.word-list__russian-word {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  @include font(normal, 400, 1.6rem, 1.5rem);
+  height: 50%;
+  padding-right: 19px;
+  padding-left: 10px;
+  padding-bottom: 20px;
+
+  @media (max-width: $width-desktop) {
+    font-size: 1.4rem;
+    line-height: 1.2rem;
+    padding-bottom: 17px;
+  }
+
+  @media (max-width: $width-laptop) {
+    font-size: 1.2rem;
+    line-height: 1rem;
+    padding-right: 10px;
+    padding-left: 5px;
+    padding-bottom: 14px;
+  }
+}
+
+.words-page__games {
+  display: flex;
+  gap: 32px;
+  justify-content: flex-end;
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  padding-left: 100px;
+  margin-left: -100px;
+  margin-top: 8px;
+  padding-top: 24px;
+  padding-bottom: 132px;
+  margin-bottom: -108px;
+
+  @media (max-width: $width-desktop) {
+    gap: 24px;
+    background-size: 290px;
+    padding-left: 120px;
+    margin-left: -120px;
+  }
+
+  @media (max-width: $width-laptop) {
+    gap: 16px;
+    background-size: 268px;
+    padding-top: 16px;
+    padding-left: 50px;
+    margin-left: -50px;
+  }
+
+  @media (max-width: $width-mobile) {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-top: 16px;
+    width: 460px;
+    align-self: center;
+    padding-left: 160px;
+    margin-left: -160px;
+  }
+}
+
+.words-page__audio-img,
+.words-page__sprint-img {
+  transition: 0.3s all;
+
+  @media (max-width: $width-laptop) {
+    width: 220px;
+  }
+
+  @media (max-width: $width-laptop) {
+    width: 178px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.04);
+  }
+}
+
+.word-display {
+  display: flex;
+  flex-direction: column;
+  width: 430px;
+  justify-content: flex-start;
+
+  @media (max-width: $width-laptop) {
+    width: 400px;
+  }
+
+  @media (max-width: $width-tablet) {
+    width: 700px;
+    order: -1;
+  }
+
+  @media (max-width: $width-mobile) {
+    width: 90%;
+    min-width: 320px;
+  }
+
+  &__message {
+    position: absolute;
+    display: none;
+    animation-name: fadeMessage;
+    animation-timing-function: cubic-bezier(0.000, 0.300, 0.000, 1.000);
+    top: 50px;
+    margin-left: 9px;
+    margin-right: 9px;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--color-main);
+    @include font(normal, 400, 1.2rem, 1.5rem);
+
+    animation-duration: 3.5s;
+    animation-fill-mode: both;
+  }
+}
+
+.word-display__box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 24px;
+  justify-content: space-between;
+  align-items: center;
+  background: center/cover no-repeat;
+  border: solid 5px $color-basic;
+  padding: 16px 16px;
+
+  @media (max-width: $width-desktop) {
+    gap: 8px;
+  }
+
+  @media (max-width: $width-desktop) {
+    padding: 12px 12px;
+  }
+
+  @media (max-width: $width-tablet) {
+    padding: 10px 5px;
+    flex-wrap: wrap;
+    height: 420px;
+  }
+
+  @media (max-width: $width-mobile) {
+    padding: 8px 8px;
+    flex-wrap: nowrap;
+    height: auto;
+  }
+}
+
+.word-display__text {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @media (max-width: $width-tablet) {
+    width: 290px;
+  }
+
+  @media (max-width: $width-mobile) {
+    width: 100%;
+  }
+}
+
+.word-display__nav {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.word-display__en {
+  @include font(normal, 700, 3.4rem, normal);
+
+  @media (max-width: $width-desktop) {
+    font-size: 3.2rem;
+  }
+
+  @media (max-width: $width-laptop) {
+    font-size: 3rem;
+  }
+}
+
+.word-display__ru,
+.word-display__sound {
+  @include font(normal, 400, 2.2rem, normal);
+  text-align: center;
+
+  @media (max-width: $width-laptop) {
+    font-size: 2rem;
+  }
+}
+
+.word-display__transcription {
+  display: flex;
+  gap: 15px;
+  margin-top: 4px;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-listen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--color-btn);
+  transition: all 0.2s;
+
+  &>.btn-listen__img {
+    filter: var(--filter-dark-accent);
+  }
+
+  &:hover {
+    background-color: var(--color-accent);
+    cursor: pointer;
+  }
+
+  &.active {
+    background-color: var(--color-dark-accent);
+    cursor: auto;
+
+    &>.btn-listen__img {
+      filter: invert(100%);
+    }
+  }
+}
+
+.word-display__picture {
+  position: relative;
+  width: 100%;
+  min-height: 100px;
+  margin: 0 -4px;
+
+  @media (max-width: $width-tablet) {
+    width: 360px;
+    order: 1;
+    margin: auto;
+  }
+
+  @media (max-width: $width-mobile) {
+    width: 100%;
+    max-width: 390px;
+    order: 0;
+    margin: 0 -4px;
+  }
+}
+
+.word-display__picture-img {
+  width: 100%;
+}
+
+.btn-hard,
+.btn-learn,
+.games-stat {
+  display: flex;
+  position: absolute;
+  height: 32px;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: var(--color-btn);
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s;
+  gap: 8px;
+  opacity: 0.9;
+
+  &>.btn-hard__img {
+    background: url("./assets/images/icons/btn-hard.svg") center no-repeat;
+  }
+
+  &>.btn-learn__img {
+    background: url("./assets/images/icons/btn-learn.svg") center no-repeat;
+  }
+
+  &>.btn-hard__img,
+  &>.btn-learn__img {
+    width: 24px;
+    height: 24px;
+    filter: var(--filter-dark-accent)
+  }
+
+  &.active {
+    background-color: var(--color-dark);
+
+    &>.btn-hard__img {
+      background: url("./assets/images/icons/btn-hard-true.svg") center no-repeat;
+    }
+
+    &>.btn-learn__img {
+      background: url("./assets/images/icons/btn-learn-true.svg") center no-repeat;
+    }
+
+    &>.btn-hard__img,
+    &>.btn-learn__img {
+      filter: invert(100%);
+    }
+
+    &:hover {
+      background-color: var(--color-dark-accent);
+    }
+  }
+}
+
+.btn-hard:hover,
+.btn-learn:hover {
+  background-color: var(--color-accent);
+  cursor: pointer;
+}
+
+.btn-hard {
+  left: 8px;
+  top: 8px;
+  width: 130px;
+}
+
+.btn-learn {
+  right: 8px;
+  top: 8px;
+  width: 144px;
+}
+
+.games-stat {
+  left: 8px;
+  bottom: 10px;
+  gap: 24px;
+}
+
+.btn-hard::after {
+  content: "В сложные";
+  padding-top: 4px;
+  font-family: $font-family-additional;
+  @include font(normal, 700, 1.6rem, 100%);
+  color: var(--color-dark-accent);
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.btn-hard.active::after {
+  content: "Сложное";
+  color: $color-additional;
+  letter-spacing: 0.5px;
+}
+
+.btn-learn::after {
+  content: "В изученные";
+  padding-top: 4px;
+  font-family: $font-family-additional;
+  @include font(normal, 700, 1.6rem, 100%);
+  color: var(--color-dark-accent);
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.btn-learn.active::after {
+  content: "Изучено";
+  color: $color-additional;
+  letter-spacing: 0.5px;
+}
+
+.btn-hard__txt,
+.btn-learn__txt {
+  padding-top: 4px;
+  font-family: $font-family-additional;
+  @include font(normal, 700, 1.6rem, 100%);
+  color: var(--color-dark-accent);
+}
+
+.games-stat__audio,
+.games-stat__sprint {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.games-stat__audio-icon,
+.games-stat__sprint-icon {
+  filter: var(--filter-dark-accent);
+  margin-right: 4px;
+}
+
+.games-stat__audio-success,
+.games-stat__audio-total,
+.games-stat__sprint-success,
+.games-stat__sprint-total,
+.games-stat__divider {
+  padding-top: 4px;
+  font-family: $font-family-additional;
+  @include font(normal, 400, 1.8rem, 100%);
+  color: var(--color-dark-accent);
+}
+
+.games-stat__divider {
+  color: var(--color-dark);
+}
+
+.word-display__meaning,
+.word-display__example {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+
+  @media (max-width: $width-tablet) {
+    width: 300px;
+  }
+
+  @media (max-width: $width-mobile) {
+    width: 100%;
+  }
+}
+
+.word-display__meaning-head,
+.word-display__example-head {
+  font-family: $font-family-additional;
+  color: var(--color-dark);
+  @include font(normal, 700, 1.8rem, normal);
+  text-align: left;
+}
+
+.word-display__meaning-head {
+  @media (max-width: $width-desktop) {
+    display: none;
+  }
+}
+
+.word-display__meaning-en,
+.word-display__example-en {
+  text-align: left;
+  @include font(normal, 400, 1.8rem, normal);
+
+  @media (max-width: $width-desktop) {
+    font-size: 1.6rem;
+  }
+
+  @media (max-width: $width-laptop) {
+    font-size: 1.5rem;
+  }
+}
+
+.word-display__meaning-ru,
+.word-display__example-ru {
+  text-align: right;
+  @include font(normal, 400, 1.8rem, normal);
+
+  @media (max-width: $width-desktop) {
+    font-size: 1.6rem;
+  }
+
+  @media (max-width: $width-laptop) {
+    font-size: 1.5rem;
+  }
+}
+
+.no-display {
+  display: none;
+}
+
+.grayscale80 {
+  filter: grayscale(80%);
+  pointer-events: none;
+}
+
+.word-list .wait-for-server {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+@keyframes fadeMessage {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

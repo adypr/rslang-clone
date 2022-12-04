@@ -1,0 +1,54 @@
+@import '../base/constants';
+
+.button {
+  width: 300px;
+  border: 4px solid $color-basic;
+  border-radius: 10px;
+  padding: 12px 0;
+  @include font(normal, 400, 2.8rem, 100%);
+  display: block;
+  text-align: center;
+  transition: box-shadow .3s linear,
+              background-color .3s linear;
+
+  @media (max-width: $width-desktop) {
+    width: 250px;
+  }
+
+  &:active {
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.button-basic {
+  color: $color-basic;
+  background-color: $color-additional;
+
+  &:hover {
+    background-color: $color-button-basic-hover;
+  }
+
+  &:active {
+    background-color: $color-button-basic-active;
+  }
+}
+
+.button-additional {
+  color: $color-additional;
+  background-color: $color-button-additional;
+  font-weight: 700;
+
+  &:hover {
+    background-color: $color-button-additional-hover;
+  }
+
+  &:active {
+    background-color: $color-button-additional-active;
+  }
+}
+
+.button-transparent {
+  @include font(normal, 700, 1.8rem, 100%);
+  color: $color-basic;
+  background: inherit;
+}
