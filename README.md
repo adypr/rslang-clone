@@ -21,7 +21,12 @@ All of the code was written on **Typescript**. No frameworks were used.
 
 ### Deploy: 
 
-https://lmakshow.github.io/rslang/index.html
+https://exquisite-snickerdoodle-ac4aa2.netlify.app/index.html
+
+Note: to run project:
+    - download locally this backend repository: https://github.com/adypr/react-rslang-be
+    - run command: npm install
+    - run command: npm start
 
 ### Screenshots:
 

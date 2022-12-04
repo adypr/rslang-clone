@@ -7,7 +7,7 @@ import { Settings, Statistics } from '../models/statistics.interface';
 import { AggregatedWords } from '../models/aggregatedWords.interface';
 import { newStatistics } from './statistics';
 
-export const SERVER = 'https://rslang-team-bam.herokuapp.com/';
+export const SERVER = 'http://localhost:3000';
 
 export default class Loader {
   private static errorHandler(res: Response): Response {
