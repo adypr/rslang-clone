@@ -7,7 +7,7 @@ import { Settings, Statistics } from '../models/statistics.interface';
 import { AggregatedWords } from '../models/aggregatedWords.interface';
 import { newStatistics } from './statistics';
 
-export const SERVER = 'https://backend-rs-1c3t.onrender.com';
+export const SERVER = 'https://react-rslang-be-ur2a.onrender.com';
 
 export default class Loader {
   private static errorHandler(res: Response): Response {
